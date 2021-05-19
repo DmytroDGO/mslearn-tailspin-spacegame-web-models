@@ -1,5 +1,7 @@
+trigger:
+- '*'
 pool:
-  vmImage: 'Ubuntu-18.04'
+  name: Windows DGO PC
 
 variables:
   buildConfiguration: 'Release'
@@ -39,6 +41,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models'
+    publishVstsFeed: 'Test Project/Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
